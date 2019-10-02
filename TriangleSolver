@@ -1,0 +1,33 @@
+using Seng8040_Assignment_2;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Seng8040_Assignment_2
+{
+    public static class TriangleSolver
+    {
+        public static string Analyze(int n1, int n2, int n3)
+        {
+            
+            if ((n1 == n2 && n2 == n3 && n3 == n1))
+            {
+                return ("It is an Equilateral Traingle\n");
+            }
+            else if (n1 != n2 && n2 != n3 && n3 != n1)
+            {
+                return ("It is an Scalene Triangle\n");
+            }
+            else if (n1 == n2 || n2 == n3 || n3 != n1)
+            {
+                return ("It is an Isosceles Triangle\n");
+            }
+            else
+            {
+                return "Null";
+            }
+        }
+    }
+}
